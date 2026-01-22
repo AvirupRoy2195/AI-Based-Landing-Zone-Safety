@@ -12,3 +12,4 @@ statsmodels>=0.13.0
 openpyxl>=3.0.0
 jupyter>=1.0.0
 ipykernel>=6.0.0
+catboost>=1.2.0

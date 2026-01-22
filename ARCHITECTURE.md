@@ -53,22 +53,17 @@ Data Cleaning (numeric coercion, dropna)
 │  │  Tuned    │  │ Stacking  │  │ RF  │ │
 │  │  XGBoost  │  │ Ensemble  │  │     │ │
 │  └─────┬─────┘  └─────┬─────┘  └──┬──┘ │
-│        │              │            │    │
-│        └──────────┬───┴────────────┘    │
-│                   ↓                     │
-│           Average Probabilities         │
-└─────────────────────────────────────────┘
-```
+### 3. Model Architecture & Optimization
+The system uses a **Safety-First Multi-Model Evaluation Pipeline**:
+1. **Candidate Suite**: 11 diverse models (Standard Ensembles, Boosted Trees, SVM, KNN, MLP).
+2. **Resampling**: SMOTE is applied to balance safety labels.
+3. **Safety Optimization**: For each model, the probability threshold is dynamically scanned (0.5 to 0.95) to find the point where **False Positives (Fatal Errors) are minimized to zero**.
+4. **Tie-Breaking**: If multiple models achieve zero fatal errors, the model with the fewest False Negatives (Missed Landings) is prioritized.
 
-**Stacking Ensemble Internal:**
-```
-Base Estimators:
-├── Random Forest (n=150, depth=10)
-├── XGBoost (n=150, depth=7, lr=0.1)
-└── Gradient Boosting (n=150, depth=5)
-        ↓
-Meta-Learner: Logistic Regression
-```
+### 4. Evaluation Metrics
+- **Strict Precision**: Primary metric. Classification of an unsafe zone as safe (False Positive) is considered a "Fatal Error."
+- **Safety Recall**: Identifies the percentage of safe zones successfully detected.
+- **Decision Threshold (t)**: Optimized per model to guarantee safety ($Precision \rightarrow 1.0$).
 
 ### 4. Training Pipeline
 
