@@ -13,7 +13,8 @@ An AI-powered system for autonomous drone landing zone classification using terr
 This project implements a machine learning pipeline to classify drone landing zones as **Safe** or **Unsafe** based on terrain characteristics extracted from aerial imagery. The system prioritizes **Precision** over Accuracy to minimize dangerous False Positives in safety-critical autonomous drone operations.
 
 ### Key Features
-- 📊 **Comprehensive EDA**: Detailed statistical analysis and distribution checks
+- 📊 **Comprehensive EDA & Interpretation**: Detailed statistical analysis with domain-specific risk assessments
+- 📝 **Detailed Notebook Documentation**: Step-by-step markdown interpretations linking data to safety conclusions
 - 🎯 **High-Accuracy Classification**: Ensemble models achieving ~97% ROC-AUC
 - 🔧 **Advanced Feature Engineering**: Domain-specific interaction features
 - 📊 **Spatial Safety Mapping**: Heatmap visualization of the "Goldilocks Zone"

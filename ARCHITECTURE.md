@@ -9,11 +9,11 @@ flowchart TD
     C --> D[Feature Engineering]
     D --> E[12 Enhanced Features]
     E --> F[Ensemble Model]
-    F --> G{Safety Probability}
-    G -->|P >= 0.85| H[✅ LAND]
-    G -->|0.60 <= P < 0.85| I[⚠️ CAUTION]
-    G -->|0.40 <= P < 0.60| J[🔄 LOITER]
-    G -->|P < 0.40| K[❌ ABORT]
+    F --> G{Decision Logic}
+    G -->|Prob >= 0.85 & Conf >= 0.70| H[✅ LAND]
+    G -->|Prob >= 0.60| I[⚠️ CAUTION]
+    G -->|Prob >= 0.40| J[🔄 LOITER]
+    G -->|Else| K[❌ ABORT]
 ```
 
 ## Pipeline Components
