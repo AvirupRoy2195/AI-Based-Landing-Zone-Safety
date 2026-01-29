@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Roy"
+  given-names: "Avirup"
+  url: "https://github.com/AvirupRoy2195"
+title: "AI-Based Landing Zone Safety Classification System"
+version: 1.0.0
+date-released: 2024-01-01
+url: "https://github.com/AvirupRoy2195/AI-Based-Landing-Zone-Safety"
