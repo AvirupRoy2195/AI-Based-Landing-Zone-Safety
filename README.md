@@ -1,10 +1,33 @@
 # AI-Based Landing Zone Safety Classification System
 
+![Python](https://img.shields.io/badge/python-3.7%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 ## 🎯 Project Overview
 
 An advanced autonomous AI system for real-time drone landing zone safety classification. The system analyzes multi-modal terrain and environmental features to classify landing zones as **Safe** or **Unsafe**, with a strict emphasis on **minimizing false positives** (fatal errors) to ensure flight safety.
 
 **Key Objective**: Enable autonomous drones to make confident, safety-critical landing decisions in complex terrain without human intervention.
+
+---
+
+## 📖 Documentation
+For a full view of the project analysis and results, check out the [Project Page](https://aviruproy2195.github.io/AI-Based-Landing-Zone-Safety/).
+
+## 📋 Table of Contents
+- [Project Overview](#-project-overview)
+- [System Architecture](#-system-architecture)
+- [Performance Results](#-performance-results)
+- [Technical Stack](#-technical-stack)
+- [File Structure](#-file-structure)
+- [How to Run](#-how-to-run)
+- [Model Interpretation](#-model-interpretation)
+- [Safety-First Design Philosophy](#-safety-first-design-philosophy)
+- [Decision Space Visualization](#-decision-space-visualization)
+- [Future Improvements](#-future-improvements)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Author](#-author)
 
 ---
 
@@ -178,8 +201,14 @@ AI-Based-Landing-Zone-Safety/
 ├── Capstone_Project_fixed.ipynb        # ✅ Final optimized notebook
 ├── Landing Zone Dataset.xlsx            # 3,000 terrain samples
 ├── README.md                            # This file
-├── AI Based Landing Zone Safety Capstone.pdf  # Original requirements
-└── catboost_info/                       # Training logs (if CatBoost used)
+├── requirements.txt                     # Dependencies
+├── LICENSE                              # MIT License
+├── CONTRIBUTING.md                      # Contribution Guidelines
+├── CODE_OF_CONDUCT.md                   # Code of Conduct
+├── CITATION.cff                         # Citation File
+├── docs/                                # Documentation (GitHub Pages)
+│   └── index.html                       # Project Report HTML
+└── AI Based Landing Zone Safety Capstone.pdf  # Original requirements
 ```
 
 ---
@@ -188,7 +217,7 @@ AI-Based-Landing-Zone-Safety/
 
 ### Prerequisites
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn xgboost lightgbm imblearn shap statsmodels scipy
+pip install -r requirements.txt
 ```
 
 ### Execution Steps
@@ -273,7 +302,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn xgboost lightgbm imblea
    - LAND decision requires BOTH:
      - High safety probability (≥ 0.85)
      - High sensor confidence (≥ 0.70)
-   - Prevents false confidence in ambiguous terrain
+     - Prevents false confidence in ambiguous terrain
 
 ---
 
@@ -315,6 +344,11 @@ The system's decision boundaries are visualized as a 3-panel plot:
 
 ---
 
+## 🤝 Contributing
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+---
+
 ## 📚 References
 
 - Dataset: Custom-generated 3,000 terrain samples
@@ -326,7 +360,7 @@ The system's decision boundaries are visualized as a 3-panel plot:
 
 ## 📝 License
 
-This project is part of the AI-Based Landing Zone Safety Capstone. See `AI Based Landing Zone Safety Capstone.pdf` for original specifications.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
